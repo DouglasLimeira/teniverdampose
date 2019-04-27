@@ -50,7 +50,7 @@
 
                     <?php
                         $sql = "SELECT * FROM indicacao";
-                        $conn = new PDO('mysql:host=localhost;dbname=teniverdampose','root','');
+                        $conn = new PDO('mysql:host=sql10.freemysqlhosting.net;dbname=sql10289766','sql10289766','H4XdjMq1y6');
                         $stmt = $conn->prepare($sql);
                         $stmt->execute();
                         $indicacoes = $stmt->fetchAll();
@@ -60,43 +60,19 @@
                             echo '<tr>';
                             echo '<th scope="col">Nome do filme</th>';
                             echo '<th scope="col">Indicado por</th>';
-                            echo '<th scope="col">Assistido por Artur</th>';
-                            echo '<th scope="col">Assistido por Douglas</th>';
-                            echo '<th scope="col">Assistido por Jonny</th>';
+                            echo '<th scope="col">Onde Encontrar</th>';
                             echo '</thead>';
                             echo '<tbody>';
                             
                             foreach($indicacoes as $indic) {
                                 echo "<tr>";
-                                echo "<td width='30%'>".$indic['filme']."</td>";
-                                echo "<td width='30%'>".$indic['indicador']."</td>";
-                                echo "<td style='text-align:center;'width='10%' name='".$indic['id']."'>
-                                        <input class='form-check-input' type='checkbox'
-                                            onChange='selecionarIndicacao(".$indic['id'].", \"artur\")'";
-                                            if($indic['assistidoArtur']) {
-                                                echo " checked ";
-                                            }
-                                echo "value='".$indic['assistidoArtur']."' id='artur".$indic['id']."'/> </td>";
-                                echo "<td style='text-align:center;'width='10%'>
-                                        <input class='form-check-input' type='checkbox' 
-                                            onChange='selecionarIndicacao(".$indic['id'].", \"douglas\")'";
-                                            if($indic['assistidoDouglas']) {
-                                                echo " checked ";
-                                            }
-                                echo "value='".$indic['assistidoDouglas']."' id='douglas".$indic['id']."'/> </td>";
-                                echo "<td style='text-align:center;'width='10%'>
-                                        <input class='form-check-input' type='checkbox' 
-                                            onChange='selecionarIndicacao(".$indic['id'].", \"jonny\")'";
-                                            if($indic['assistidoJonny']) {
-                                                echo " checked ";
-                                            }
-                                echo "value='".$indic['assistidoJonny']."' id='jonny".$indic['id']."'/> </td>";
+                                echo "<td>".$indic['filme']."</td>";
+                                echo "<td>".$indic['indicador']."</td>";
+                                echo "<td>".$indic['ondeEncontrar']."</td>";
                                 echo "</tr>";
                             }
                             echo '</tbody>';
                             echo '</table>';
-                            echo '<input type="hidden" id="filmeSelecionado"     name="filmeSelecionado" />';
-                            echo '<input type="hidden" id="indicadorSelecionado" name="indicadorSelecionado" />';
                         }
                     ?>
                 </form>
