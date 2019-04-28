@@ -13,8 +13,6 @@
                 $stmt->execute([$filme,$indicador,$ondeEncontrar]);
             }
         }
-        
-
     }
     header("location:index.php");
 ?>

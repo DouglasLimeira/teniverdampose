@@ -28,19 +28,19 @@
                 
                 <form id="formIndicacao" method="POST" action="control.php">
                     <div class="form-row">
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-lg-3 col-md-12 col-sm-12">
                             <label for="filme" >Indicaciôn du Filmê</label>
                             <input type="text" class="form-control" id="filme" name="filme" placeholder="Filmê que vucê acha bastanti importantê">
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-lg-3 col-md-12 col-sm-12">
                             <label for="indicador" >Indicaduor</label>
                             <input type="text" class="form-control" id="indicador" name="indicador" placeholder="Gênier por trás du indicacion">
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-lg-3 col-md-12 col-sm-12">
                             <label for="indicador" >Ondê Encontrê</label>
                             <input type="text" class="form-control" id="ondeEncontrar" name="ondeEncontrar" placeholder="Ondê Encontrê">
                         </div>
-                        <div class="form-group col-md-3">
+                        <div class="form-group col-lg-3 col-md-12 col-sm-12">
                             <label>Demonstré su</label>
                             <input type="submit" name="enviar" value="Gêialitê" class="btn btn-primary form-control"/>
                         </div>
